@@ -51,6 +51,17 @@
         iNumber += 1; // 2
         iNumber ++; // 3 => lấy số hiện tại +1 đơn vị
         console.log('iNumber',iNumber);
+
+        /* Bài tập 1 : Viết chương trình nhập vào số nguyên dương n, với 3 kí số. Tính và xuất tổng 3 kí số của n 891*/
+
+        var n = 891;
+        var hangDonvi = n % 10;
+        var hangChuc = Math.floor(n%100/10);
+        var hangTram = Math.floor(n/100);
+
+        var sum = hangDonvi + hangChuc + hangTram;
+        console.log('Tong n la:', sum);
+
         
     </script>
   </body>
