@@ -24,6 +24,19 @@
   </head>
 
   <body>
+    <div class="container mt-3">
+      <h3>Ví dụ 1: Thay đổi nội dung của thẻ</h3>
+      <h3 id="h3Text">Học Js thui</h3>
+      <p id="pText">Nội dung trước khi thay đổi</p>
+      <button class="btn btn-success" onclick="handle_click()">Nhấn Đi</button>
+      <hr />
+
+      <h3>Ví dụ 2 : Xấy dựng tính năng bật - tắt đèn</h3>
+      <br />
+      <button id="idBatDen" class="btn btn-success">Bật Đèn</button>
+      <img id="imgVidu2" src="./img/pic_bulboff.gif" alt="tắt đèn" />
+      <button id="idTatden" class="btn btn-danger">Tắt Đèn</button>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -41,28 +54,29 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- //////////////////////// -->
     <script type="text/javascript">
-        // -------------------Các lệnh output : Là lệnh hiển thị nội dung ra màn hình trang web--------------
-        // alert('nội dung'): Hiển thị nội dung lên hộp thoại trang web
+      // -------------------Các lệnh output : Là lệnh hiển thị nội dung ra màn hình trang web--------------
+      // alert('nội dung'): Hiển thị nội dung lên hộp thoại trang web
 
-        // Các khai báo biến var  tenBien= ' giá trị '
-        //---------- Các toán tử tiền tố hậu tố ------------
-        var iNumber = 1;
-        iNumber += 1; // 2
-        iNumber ++; // 3 => lấy số hiện tại +1 đơn vị
-        console.log('iNumber',iNumber);
+      // Các khai báo biến var  tenBien= ' giá trị '
+      //---------- Các toán tử tiền tố hậu tố ------------
+      var iNumber = 1;
+      iNumber += 1; // 2
+      iNumber++; // 3 => lấy số hiện tại +1 đơn vị
+      console.log("iNumber", iNumber);
 
-        /* Bài tập 1 : Viết chương trình nhập vào số nguyên dương n, với 3 kí số. Tính và xuất tổng 3 kí số của n 891*/
+      /* Bài tập 1 : Viết chương trình nhập vào số nguyên dương n, với 3 kí số. Tính và xuất tổng 3 kí số của n 891*/
 
-        var n = 891;
-        var hangDonvi = n % 10;
-        var hangChuc = Math.floor(n%100/10);
-        var hangTram = Math.floor(n/100);
+      var n = 891;
+      var hangDonvi = n % 10;
+      var hangChuc = Math.floor((n % 100) / 10);
+      var hangTram = Math.floor(n / 100);
 
-        var sum = hangDonvi + hangChuc + hangTram;
-        console.log('Tong n la:', sum);
-
-        
+      var sum = hangDonvi + hangChuc + hangTram;
+      console.log("Tong ba số:", n, "=", sum);
     </script>
+    <!-- ----------------------- -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
