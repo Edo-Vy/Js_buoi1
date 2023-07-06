@@ -29,13 +29,47 @@
       <h3 id="h3Text">Học Js thui</h3>
       <p id="pText">Nội dung trước khi thay đổi</p>
       <button class="btn btn-success" onclick="handle_click()">Nhấn Đi</button>
+
       <hr />
 
       <h3>Ví dụ 2 : Xấy dựng tính năng bật - tắt đèn</h3>
       <br />
-      <button id="idBatDen" class="btn btn-success">Bật Đèn</button>
+      <button id="idBatDen">Bật Đèn</button>
       <img id="imgVidu2" src="./img/pic_bulboff.gif" alt="tắt đèn" />
-      <button id="idTatden" class="btn btn-danger">Tắt Đèn</button>
+      <button id="idTatden">Tắt Đèn</button>
+
+      <hr/>
+      <h3>Bài tập 1 : Xây dựng úng dụng tính tiền Tip</h3>
+      <div class="d-flex justify-content-center">
+        <div class="card w-50">
+          <h3 class="card-header bg-danger text-center text-white">Tính Tiền Tip</h3>
+          <div class="card-body">
+            <div class="form-group">
+              <p> Tổng tiền thanh toán</p>
+              <input class="form-control" id="idTongTien"/>
+            </div>
+            <div class="form-group">
+              <p>Bạn Muốn Chọn Tiền Tip Bao Nhiêu</p>
+              <select id="phanTramTip" class="form-control">
+                <option value="30"> 30% - Rất Tốt</option>
+                <option value="20">20% - Tốt</option>
+                <option value="15">15% - Ổn</option>
+                <option value="10">10% - Tồi</option>
+                <option value="5">5% - Tệ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <p>Số Nhân Viên Tip</p>
+              <input id="idSoNV" class="form-control"/>
+            </div>
+            <div class="card-footer text-center">
+              <h3>Tiền Tip/1 Nhân Viên</h3>
+              <p id="tienTip">$</p>
+              <button class="btn btn-danger" id="btnTinh">Tính</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

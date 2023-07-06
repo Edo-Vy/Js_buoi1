@@ -31,11 +31,36 @@ var imgHinh = document.getElementById('imgVidu2');
 
 btnBatDen.onclick = function(){
   
-   // Xử lý active button
+   
     imgHinh.src ='../img/pic_bulbon.gif';
+    // Xử lý active button
+    btnBatDen.className = 'btn btn-success';
+    btnTatDen.className= '';
 }
 btnTatDen.onclick = function(){
 
-   // Xử lý active button
+   
     imgHinh.src ='../img/pic_bulboff.gif';
+    // Xử lý active button
+    btnBatDen.className='';
+    btnTatDen.className ='btn btn-success';
+}
+
+//======= Bài tập 1: Tính tiền tip
+
+var btnTinhTien = document.getElementById('btnTinh');
+
+btnTinhTien.onclick = function(){
+    // Ghi chú: tất cả dữ liệu lấy từ giao diện mạc định là chuỗi
+    // input : Tổng tiền - number, phần trăm tip - number, số nhân viên- number
+    var tongTien =Number(document.getElementById('idTongTien').value);
+    var phanTramTip = Number(document.getElementById('phanTramTip').value);
+    var soNV = Number(document.getElementById('idSoNV').value);
+    // output : Số tiền Tip mỗi người - number
+    var tienTip = 0;
+    tienTip = tongTien *phanTramTip/100 / soNV;
+
+    // Hiển thị kết quả trên giao diện
+    // toFixed(2) : làm tròn 2 số
+    document.getElementById('tienTip').innerHTML = tienTip.toFixed(2) + '$';
 }
