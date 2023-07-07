@@ -38,20 +38,22 @@
       <img id="imgVidu2" src="./img/pic_bulboff.gif" alt="tắt đèn" />
       <button id="idTatden">Tắt Đèn</button>
 
-      <hr/>
+      <hr />
       <h3>Bài tập 1 : Xây dựng úng dụng tính tiền Tip</h3>
       <div class="d-flex justify-content-center">
         <div class="card w-50">
-          <h3 class="card-header bg-danger text-center text-white">Tính Tiền Tip</h3>
+          <h3 class="card-header bg-danger text-center text-white">
+            Tính Tiền Tip
+          </h3>
           <div class="card-body">
             <div class="form-group">
-              <p> Tổng tiền thanh toán</p>
-              <input class="form-control" id="idTongTien"/>
+              <p>Tổng tiền thanh toán</p>
+              <input class="form-control" id="idTongTien" />
             </div>
             <div class="form-group">
               <p>Bạn Muốn Chọn Tiền Tip Bao Nhiêu</p>
               <select id="phanTramTip" class="form-control">
-                <option value="30"> 30% - Rất Tốt</option>
+                <option value="30">30% - Rất Tốt</option>
                 <option value="20">20% - Tốt</option>
                 <option value="15">15% - Ổn</option>
                 <option value="10">10% - Tồi</option>
@@ -60,7 +62,7 @@
             </div>
             <div class="form-group">
               <p>Số Nhân Viên Tip</p>
-              <input id="idSoNV" class="form-control"/>
+              <input id="idSoNV" class="form-control" />
             </div>
             <div class="card-footer text-center">
               <h3>Tiền Tip/1 Nhân Viên</h3>
@@ -70,6 +72,80 @@
           </div>
         </div>
       </div>
+      <hr />
+      <h3>Ví dụ 3: Cho phép người dùng nhập vào 2 số => in ra số lớn nhất</h3>
+      <div class="form-group row">
+        <div class="col-4">
+          <p>Nhập số thứ 1</p>
+          <input class="form-control" id="soThuNhat" />
+        </div>
+        <div class="col-4">
+          <p>Nhập số thứ 2</p>
+          <input class="form-control" id="soThuHai" />
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <button class="btn btn-success" id="btnInSoLonNhat">
+          In ra số lớn nhất
+        </button>
+      </div>
+      <div id="ketQua1" class="mt alert alert-success"></div>
+
+      <hr />
+      <h3>
+        Ví dụ 4: Viết chương trình cho phép người dùng nhập vào điểm toán, điểm
+        lý, điểm hóa => Tính điểm trung bình và xếp loại
+      </h3>
+      <p class="alert alert-warning">
+        ĐTB bé hơn 5 => Học lực yếu <br />
+        ĐTB >= 5 và bé hơn 6.5 => Học lực TB <br />
+        ĐTB >= 6.5 và bé hơn 8 => Học lực khá <br />
+        ĐTB >= 8 và bé hơn 10 => Học lực giỏi
+      </p>
+
+      <div class="form-group row">
+        <div class="col-4">
+          <p>Nhập điểm Toán</p>
+          <input id="diemToan" class="form-control" />
+        </div>
+        <div class="col-4">
+          <p>Nhập điểm Lý</p>
+          <input class="form-control" id="diemLy" />
+        </div>
+        <div class="col-4">
+          <p>Nhập điểm Hóa</p>
+          <input class="form-control" id="diemHoa" />
+        </div>
+      </div>
+      <div class="mt-2 form-group">
+        <button class="btn btn-success" id="btnXepLoai">Xếp Loại</button>
+      </div>
+      <div id="idKetQua2" class="alert alert-success"></div>
+      <hr />
+      <h3>
+        Bài tập 2: Viết chương trình cho phép người dùng nhập vào số giờ và
+        lương trên 1h. Tính tiền lương theo công thức sau. Làm quá 40 tiếng thì
+        tiếng thứ 41 sẽ tính lương gấp 1.5 lần
+      </h3>
+      <p class="alert alert-warning">
+        Ví dụ người dùng nhập vào:  40 giờ và tiền lương 100 <br/> Tiền lương 400<br/>
+         45 giờ và lương 100 <br/> Tiền lương : 400 + (5*1.5*100)
+
+      </p>
+      <div class="form-group row">
+        <div class="col-4">
+          <p>Nhập vào số giờ</p>
+          <input class="form-control" id="soGio"/>
+        </div>
+        <div class="col-4">
+          <p>Nhập số tiền lương /1h</p>
+          <input class="form-control" id="tienLuong"/>
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <button class="btn btn-success" id="tinhTien">Tiền Lương</button>
+      </div>
+      <div class="alert alert-success" id="ketQua3"></div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
