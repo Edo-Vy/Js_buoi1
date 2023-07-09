@@ -92,28 +92,28 @@ document.getElementById('btnInSoLonNhat').onclick = function () {
     ĐTB >= 8 và bé hơn 10 => Học lực giỏi
 */
 
-document.getElementById('btnXepLoai').addEventListener('click', function(){
+document.getElementById('btnXepLoai').addEventListener('click', function () {
 
     var diemToan = Number(document.getElementById('diemToan').value);
     var diemLy = Number(document.getElementById('diemLy').value);
-    var diemHoa = Number ( document.getElementById('diemHoa').value);
-    
+    var diemHoa = Number(document.getElementById('diemHoa').value);
+
     // output ( String ) gồm: DTB : number + xếp loại : String
     var DTB = 0;
     var xepLoai = '';
     // progress
-    DTB = ( diemToan + diemLy + diemHoa)/3;
+    DTB = (diemToan + diemLy + diemHoa) / 3;
 
-    if ( DTB < 5){
+    if (DTB < 5) {
 
         xepLoai = 'Yếu';
-    } else if ( DTB >= 5 && DTB < 6.5){
+    } else if (DTB >= 5 && DTB < 6.5) {
         xepLoai = 'Trung Bình';
-    } else if ( DTB >= 6.5 && DTB < 8){
+    } else if (DTB >= 6.5 && DTB < 8) {
         xepLoai = ' Khá';
-    } else if( DTB >= 8 && DTB <=10){
+    } else if (DTB >= 8 && DTB <= 10) {
         xepLoai = 'Giỏi';
-    }else {
+    } else {
         xepLoai = ' Không hợp lệ';
     }
 
@@ -126,7 +126,7 @@ document.getElementById('btnXepLoai').addEventListener('click', function(){
         tiếng thứ 41 sẽ tính lương gấp 1.5 lần
 */
 
-document.getElementById('tinhTien').onclick = function(){
+document.getElementById('tinhTien').onclick = function () {
 
     // input : soGioLam: number soTienMotGio : number
     var soGio = Number(document.getElementById('soGio').value);
@@ -136,11 +136,142 @@ document.getElementById('tinhTien').onclick = function(){
     //progress
     var tongTienLuong = 0;
 
-    if( soGio <= 40){
+    if (soGio <= 40) {
         tongTienLuong = soGio * luongCB;
-    } else if ( soGio > 40){
-        tongTienLuong =  (luongCB * 40) + ((soGio -40) * luongCB * 1.5);
+    } else if (soGio > 40) {
+        tongTienLuong = (luongCB * 40) + ((soGio - 40) * luongCB * 1.5);
     }
     // toLocaleString() : tách số thêm dấu phẩy 4.000
     document.getElementById('ketQua3').innerHTML = 'Tổng số tiền lương: ' + tongTienLuong.toLocaleString();
+}
+
+/** Bài tập 4:  Bài tập 4: Viết chương trình cho phép người dùng nhập vào 1 số n từ 1 ->
+        4. In số đó ra bằng chữ. Lưu ý : khi người dùng nhập vào không phải 1, 2, 3, 4 => In ra giá trị không hợp lệ */
+
+/** Cách 1
+document.getElementById('btnDocSo').addEventListener('click', function(){
+
+    // input : 1 số n : number
+    var soN = document.getElementById('nhapSoN').value;
+    // output: đọc số : String
+    var docSoN = '';
+
+    if (soN === 1){
+         docSoN = 'Số Một';
+    } else if (soN === 2){
+        docSoN = 'Số Hai';
+    } else if ( soN === 3){
+        docSoN = 'Số Ba';
+    } else if ( soN === 4){
+        docSoN = 'Số Bốn';
+    } else{
+        docSoN =' Vui lòng nhập số từ 1 đến 4';
+    }
+
+    document.getElementById('ketQua4').innerHTML = docSoN;
+
+}) */
+
+// Cách 2 : Xử lý theo swith...case
+
+document.getElementById('btnDocSo').onclick = function () {
+
+    // input : 1 số n : number
+    var soN = Number(document.getElementById('nhapSoN').value);
+    // output: đọc số : String
+    var docSoN = '';
+
+    switch (soN) {
+        case 1: {
+            docSoN = 'Số Một';
+            //break;
+        }; break;
+        case 2: {
+            docSoN = ' Số Hai ';
+        }; break;
+        case 3: {
+            docSoN = 'Số Ba ';
+        }; break;
+        case 4: {
+            docSoN = 'Số Bốn';
+        }; break;
+        default: {
+            docSoN = 'Vui lòng nhập số từ 1 đến 4';
+        }
+    }
+
+    document.getElementById('ketQua4').innerHTML = docSoN;
+
+}
+
+/** Bài tập 5: Nhập vào một tháng ( nhập số ). In ra tên tháng và số ngày
+        của tháng đó ( không tính năm nhuần ) */
+
+document.getElementById('btnIn').onclick = function () {
+
+    // input : soN : number
+    var nhapSoN = Number(document.getElementById('nhapThang').value);
+     
+    // output : soThang : String - soNgay : String 
+    // progress
+    var soThang = '';
+    var soNgay = 0;
+
+    switch (nhapSoN) {
+
+        case 1: {
+            soThang = 'Tháng 1';
+            soNgay =  31;
+        }; break;
+        case 2: {
+            soThang = 'Tháng 2';
+            soNgay = 28;
+        }; break;
+        case 3: {
+            soThang = 'Tháng 3';
+            soNgay = 31;
+        }; break;
+        case 4: {
+            soThang = 'Tháng 4';
+            soNgay = 30;
+        }; break;
+        case 5: {
+            soThang = 'Tháng 5';
+            soNgay = 31;
+        }; break;
+        case 6: {
+            soThang = 'Tháng 6';
+            soNgay = 30;
+        }; break;
+        case 7: {
+            soThang = 'Tháng 7';
+            soNgay = 31;
+        }; break;
+        case 8: {
+            soThang = 'Tháng 8';
+            soNgay = 31;
+        }; break;
+        case 9: {
+            soThang = 'Tháng 9';
+            soNgay = 30;
+        }; break;
+        case 10: {
+            soThang = 'Tháng 10';
+            soNgay = 31;
+        }; break;
+        case 11: {
+            soThang = 'Tháng 11';
+            soNgay = 30;
+        }; break;
+        case 12: {
+            soThang = 'Tháng 12';
+            soNgay = 31;
+        }; break;
+        default: {
+            soThang = ' Tháng không Hợp Lệ!';
+            soNgay = 0;
+        }
+    }
+
+    document.getElementById('ketQua5').innerHTML = soThang + ' - ' + soNgay +' Ngày ';
 }

@@ -128,24 +128,52 @@
         tiếng thứ 41 sẽ tính lương gấp 1.5 lần
       </h3>
       <p class="alert alert-warning">
-        Ví dụ người dùng nhập vào:  40 giờ và tiền lương 100 <br/> Tiền lương 400<br/>
-         45 giờ và lương 100 <br/> Tiền lương : 400 + (5*1.5*100)
-
+        Ví dụ người dùng nhập vào: 40 giờ và tiền lương 100 <br />
+        Tiền lương 400<br />
+        45 giờ và lương 100 <br />
+        Tiền lương : 400 + (5*1.5*100)
       </p>
       <div class="form-group row">
         <div class="col-4">
           <p>Nhập vào số giờ</p>
-          <input class="form-control" id="soGio"/>
+          <input class="form-control" id="soGio" />
         </div>
         <div class="col-4">
           <p>Nhập số tiền lương /1h</p>
-          <input class="form-control" id="tienLuong"/>
+          <input class="form-control" id="tienLuong" />
         </div>
       </div>
       <div class="form-group mt-2">
         <button class="btn btn-success" id="tinhTien">Tiền Lương</button>
       </div>
       <div class="alert alert-success" id="ketQua3"></div>
+      <hr />
+      <h3>
+        Bài tập 4: Viết chương trình cho phép người dùng nhập vào 1 số n từ 1 ->
+        4. In số đó ra bằng chữ. Lưu ý : khi người dùng nhập vào không phải 1,
+        2, 3, 4 => In ra giá trị không hợp lệ
+      </h3>
+      <div class="form-group">
+        <p>Nhập vào một số</p>
+        <input class="form-control w-25" id="nhapSoN" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" id="btnDocSo">Đọc Số</button>
+      </div>
+      <div class="alert alert-success" id="ketQua4"></div>
+      <hr />
+      <h3>
+        Bài tập 5: Nhập vào một tháng ( nhập số ). In ra tên tháng và số ngày
+        của tháng đó ( không tính năm nhuần )
+      </h3>
+      <div class="form-group">
+        <p>Nhập vào số tháng</p>
+        <input class="form-control w-25" id="nhapThang"/>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" id="btnIn"> In Tháng - Ngày</button>
+      </div>
+      <div class="alert alert-success" id="ketQua5"></div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -164,7 +192,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <!-- //////////////////////// -->
+    <!-- JS -->
     <script type="text/javascript">
       // -------------------Các lệnh output : Là lệnh hiển thị nội dung ra màn hình trang web--------------
       // alert('nội dung'): Hiển thị nội dung lên hộp thoại trang web
